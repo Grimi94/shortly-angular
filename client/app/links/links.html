@@ -1,8 +1,17 @@
 <div id='links'>
+  <div class='navigation'>
+  <ul>
+    <li><a href='#/links' class='index'>All Links</a></li>
+    <li><a href='#/shorten' class='create'>Shorten</a></li>
+    <li><a href='#/signin' class='logout'>Logout</a></li>
+  </ul>
+  </div>
   <!-- Your html here -->
-  <table>
+  <table ng-controller='LinksController'>
     <tr ng-repeat="link in data.links">
-      <span>{{link}}</span>
+      <td>{{link.title}}</td>
+      <td>{{link.url}}</td>
+      <td>{{link.visits }}</td>
     </tr>
   </table>
 </div>
